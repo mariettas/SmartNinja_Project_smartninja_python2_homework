@@ -51,16 +51,17 @@ messi = FootballPlayer(first_name="Lionel", last_name="Messi", height_cm=170, we
 print(ronaldo.weight_to_lbs())
 
 
-
+#add a single player:
+"""
 # anotherPlayer = FootballPlayer(first_name=input("First Name"), last_name=input("Last Name"), height_cm=input("Height"), weight_kg=int(input("Weight")), goals=input("Goals"), yellow_cards=input("Yellow cards"),red_cards=input("Red cards"))
 
 #print(anotherPlayer.weight_to_lbs())
 
 #print(anotherPlayer.__dict__)
+"""
+
 
 #with option to add more players
-
-
 
 while True:
 
