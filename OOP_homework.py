@@ -50,26 +50,36 @@ messi = FootballPlayer(first_name="Lionel", last_name="Messi", height_cm=170, we
 
 print(ronaldo.weight_to_lbs())
 
-"""
-addplayer = input("Add another player: y/n?")
-
-    if(addplayer.lower() == "n"):
-
-        break
-
-    else: input("First name: ")
-"""
 
 
+# anotherPlayer = FootballPlayer(first_name=input("First Name"), last_name=input("Last Name"), height_cm=input("Height"), weight_kg=int(input("Weight")), goals=input("Goals"), yellow_cards=input("Yellow cards"),red_cards=input("Red cards"))
+
+#print(anotherPlayer.weight_to_lbs())
+
+#print(anotherPlayer.__dict__)
+
+#with option to add more players
 
 
-anotherPlayer = FootballPlayer(first_name=input("First Name"), last_name=input("Last Name"), height_cm=input("Height"), weight_kg=int(input("Weight")), goals=input("Goals"), yellow_cards=input("Yellow cards"),red_cards=input("Red cards"))
 
-print(anotherPlayer.weight_to_lbs())
+while True:
 
-print(anotherPlayer.__dict__)
+        anotherPlayer = FootballPlayer(first_name=input("First Name"), last_name=input("Last Name"), height_cm=input("Height"),
+                                   weight_kg=int(input("Weight")), goals=input("Goals"), yellow_cards=input("Yellow cards"),
+                                   red_cards=input("Red cards"))
+
+
+
+        more = input("Would you like to add another Player (y/n)")
+
+        if more.lower()== "n":
+            break
+
+
+
 
 json = json.dumps(anotherPlayer.__dict__)
+
 
 f = open("players.txt", "w")
 f.write(json)
